@@ -81,6 +81,7 @@
     <ClInclude Include="node.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="node.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

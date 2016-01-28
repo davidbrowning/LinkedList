@@ -11,11 +11,7 @@ int main(){
 	Node head = Node(v[0], nullptr);
 	std::shared_ptr<Node> h = std::make_shared<Node>(head);
 	initialize(h, v);
-	std::shared_ptr<Node> temp = h;
-	while (temp != nullptr){
-		std::cout << temp->value << std::endl;
-		temp = temp->next;
-	}
+	head.print(h);
 }
 
 void initialize(std::shared_ptr<Node> &head, std::vector<int> v){
