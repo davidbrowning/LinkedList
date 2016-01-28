@@ -14,6 +14,8 @@ int main(){
 	head.print(h);
 	head.insert(2, h);
 	head.print(h);
+	head.delNode(15, h);
+	head.print(h);
 }
 
 void initialize(std::shared_ptr<Node> &head, std::vector<int> v){

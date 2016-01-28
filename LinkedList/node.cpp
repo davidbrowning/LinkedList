@@ -39,5 +39,16 @@ void Node::delNode(int x, std::shared_ptr<Node> head){
 		std::cout << "Empty list" << std::endl;
 		return;
 	}
-
+	std::shared_ptr<Node> pt = head;
+	while (pt != nullptr && pt->next->getValue() < pt->getValue()){
+		if (pt->next->getValue() == x){
+			std::shared_ptr<Node> q = pt->next;
+			pt->next = q->next;
+			std::cout << "Value to be Deleted: " << x << std::endl << "Value found after: " << pt->getValue() << std::endl;
+			std::cout << "Value found before: " << pt->next->getValue() << std::endl;
+		}
+		pt = pt->next;
+	}
+	std::cout << "hit " << std::endl;
+	return;
 }
