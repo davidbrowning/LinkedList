@@ -12,12 +12,12 @@ struct Node{
 		}
 		next = n;
 	};
-	void print(std::shared_ptr<Node> head);
+	void print(std::shared_ptr<Node> &head);
 	std::shared_ptr<Node> next;
 	void setValue(int x);
-	int getValue(){
-		return value;
-	}
+	int getValue(){return value;}
+	void insert(int x, std::shared_ptr<Node> head);
+	void delNode(int x, std::shared_ptr<Node> head);
 
 private:
 	int value;

@@ -12,11 +12,13 @@ int main(){
 	std::shared_ptr<Node> h = std::make_shared<Node>(head);
 	initialize(h, v);
 	head.print(h);
+	head.insert(2, h);
+	head.print(h);
 }
 
 void initialize(std::shared_ptr<Node> &head, std::vector<int> v){
 	std::shared_ptr<Node> p = head;
-	for (int i = 1; i < v.size(); i++){
+	for (unsigned int i = 1; i < v.size(); i++){
 		p->next = std::make_shared<Node>(Node(v[i], nullptr));
 		p = p->next;
 	}
